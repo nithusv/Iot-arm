@@ -1,0 +1,31 @@
+.mySlides {
+	display: none;
+	max-height: 500px;
+	
+	}
+.w3-content {
+	margin: 0px auto;
+}
+
+
+.backgrnd
+    {
+      position: relative;
+   	  background-position: center center;
+    }
+    .left
+    {
+      position: absolute;
+      top: 60px;
+      left: 80px;
+	  max-width: 50%;
+	  max-height: 75%;
+    }
+	 .right
+    {
+      position: absolute;
+      top: 60px;
+      right: 80px;
+	  max-width: 50%;
+	  max-height: 75%;
+    }
