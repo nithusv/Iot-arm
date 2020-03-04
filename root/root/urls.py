@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from django.conf.urls import url
+from django.conf.urls import handler404
+from main import views as common_views
 from main.api import ModelList,ModelDetail,UserAuthentication
 
 urlpatterns = [
@@ -25,3 +27,5 @@ urlpatterns = [
     url(r'^api/auth/$', UserAuthentication.as_view(),name='Admin Authentication API'),
     url(r'^api/mode_list/(?P<model_id>\d+)$', ModelDetail.as_view(),name='Mode_list')
 ]
+
+handler404 = common_views.error_404
