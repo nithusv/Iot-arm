@@ -9,6 +9,7 @@
 <meta name="description" content="Destino project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap4/bootstrap.min.css'%}">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <link href="{% static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css'%}" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.css'%}">
 <link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.theme.default.css'%}">
@@ -125,10 +126,10 @@
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					<div class="section_title text-center">
+					<div data-aos="fade-up" class="section_title text-center">
 						<h2>ROBOTIC ARM</h2>
 						<p>The term robot comes from the Czech word robota, generally translated as "forced labor." This describes the majority of robots fairly well. Most robots in the world are designed for heavy, repetitive manufacturing work. They handle tasks that are difficult, dangerous or boring to human beings.The most common manufacturing robot is the robotic arm. A typical robotic arm is made up of seven metal segments, joined by six joints. The computer controls the robot by rotating individual step motors connected to each joint (some larger arms use hydraulics or pneumatics). Unlike ordinary motors, step motors move in exact increments. This allows the computer to move the arm very precisely, repeating exactly the same movement over and over again. The robot uses motion sensors to make sure it moves just the right amount.</p>
-						<div>Types of robotic arm</div>
+						<div data-aos="fade-down">Types of robotic arm</div>
 					</div>
 				</div>
 			</div>
@@ -139,7 +140,7 @@
 					<!-- Top Destination Item -->
 					<div class="top_item">
 						<a href="#">
-							<div class="top_item_image"><img src="{% static 'images/cartesian.jpg'%}" alt="https://unsplash.com/@sgabriel"></div>
+							<div data-aos="zoom-in-down" class="top_item_image"><img src="{% static 'images/cartesian.jpg'%}" alt="https://unsplash.com/@sgabriel"></div>
 							<div class="top_item_content">
 								<div class="top_item_price"></div>
 
@@ -154,7 +155,7 @@
 					<!-- Top Destination Item -->
 					<div class="top_item">
 						<a href="#">
-							<div class="top_item_image"><img src="{% static 'images/cylinderical.jpg'%}" alt="https://unsplash.com/@jenspeter"></div>
+							<div data-aos="zoom-in-down" class="top_item_image"><img src="{% static 'images/cylinderical.jpg'%}" alt="https://unsplash.com/@jenspeter"></div>
 							<div class="top_item_content">
 								<div class="top_item_price"></div>
 								<div class="top_item_text"></div>
@@ -170,7 +171,7 @@
 					<!-- Top Destination Item -->
 					<div class="top_item">
 						<a href="#">
-							<div class="top_item_image"><img src="{% static 'images/delta.jpg'%}" alt="https://unsplash.com/@anikindimitry"></div>
+							<div data-aos="zoom-in-down" class="top_item_image"><img src="{% static 'images/delta.jpg'%}" alt="https://unsplash.com/@anikindimitry"></div>
 							<div class="top_item_content">
 								<div class="top_item_price"></div>
 								<div class="top_item_text"></div>
@@ -185,7 +186,7 @@
 					<!-- Top Destination Item -->
 					<div class="top_item">
 						<a href="#">
-							<div class="top_item_image"><img src="{% static 'images/scara.jpg'%}" alt="https://unsplash.com/@hellolightbulb"></div>
+							<div data-aos="zoom-in-down" class="top_item_image"><img src="{% static 'images/scara.jpg'%}" alt="https://unsplash.com/@hellolightbulb"></div>
 							<div class="top_item_content">
 								<div class="top_item_price"></div>
 
@@ -199,7 +200,7 @@
 		</div>
 	</div>
 <!-- images slideshow-->
-<div class="w3-content" style="max-width: 75%">
+<div data-aos="flip-up" class="w3-content" style="max-width: 75%">
   <img class="mySlides" src="{% static 'images/roboarm1.jpg'%}" style="width:100%" align = "middle">
   <img class="mySlides" src="{% static 'images/roboarm2.jpg'%}" style="width:100%">
   <img class="mySlides" src="{% static 'images/roboarm3.jpg'%}" style="width:100%">
@@ -245,9 +246,9 @@ function carousel() {
 
 
 		</div >
-            <img id="imnithu" align ="left" src="{% static 'images/nithu.jpg'%}" />
-			<div id ="myname"><h2> NITHISH SV</h2> <br></div>
-			<div id ="mystudy"><h3>BE ROBOTICS AND AUTOMATION <br>ENGINEERING</h3></div>
+            <img data-aos="fade-right" id="imnithu" align ="left" src="{% static 'images/nithu.jpg'%}" />
+			<div data-aos="fade-left" id ="myname"><h2> NITHISH SV</h2> <br></div>
+			<div data-aos="fade-left" id ="mystudy"><h3>BE ROBOTICS AND AUTOMATION <br>ENGINEERING</h3></div>
 
         </div>
 
@@ -345,5 +346,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="{% static 'plugins/parallax-js-master/parallax.min.js'%}"></script>
 <script src="{% static 'plugins/magnific-popup/jquery.magnific-popup.min.js'%}"></script>
 <script src="{% static 'js/custom.js'%}"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 </body>
 </html>
