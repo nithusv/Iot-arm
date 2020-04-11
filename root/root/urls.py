@@ -18,7 +18,11 @@ from django.urls import path,include
 from django.conf.urls import url
 from django.conf.urls import handler404
 from main import views as common_views
+<<<<<<< HEAD
 from main.api import ModelList,ModelDetail,UserAuthentication,OperationModelList,OperationModelDetail
+=======
+from main.api import ModelList,ModelDetail,UserAuthentication
+>>>>>>> 15dedadfa3193c6fa78c2df66e7e42ad3f2cd23e
 
 urlpatterns = [
     path('admin/', admin.site.urls),
