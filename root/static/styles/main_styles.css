@@ -45,7 +45,7 @@
   position: relative;
   animation-name: head;
   animation-duration: 1s;
-  
+
 }
 
 @keyframes head {
@@ -60,7 +60,7 @@
 	80%   {opacity: 0.8;}
 	90%   {opacity: 0.9;}
 	100%  {opacity: 1;}
-	
+
   }
 
   #imnithu{
@@ -94,7 +94,7 @@
 	padding-right: 200px;
 	animation-name: slideright;
 	animation-duration: 1s;
-	
+
 }
 
 *
@@ -177,7 +177,7 @@ p a:hover::after
 }
 p::selection
 {
-	
+
 }
 h1{font-size: 48px;}
 h2{font-size: 40px;}
@@ -191,14 +191,14 @@ h1, h2, h3, h4, h5, h6
 	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
 	text-shadow: rgba(0,0,0,.01) 0 0 1px;
 }
-h1::selection, 
-h2::selection, 
-h3::selection, 
-h4::selection, 
-h5::selection, 
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
 h6::selection
 {
-	
+
 }
 .form-control
 {
@@ -298,6 +298,7 @@ section
 .home_background
 {
 	position: absolute;
+	background-image:url('/static/images/home.jpeg');
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -620,9 +621,9 @@ section
 	font-weight: 400 !important;
 	font-style: italic;
 	color: rgba(255, 255, 255, 0.5) !important;
-} 
+}
 .search_input:-ms-input-placeholder
-{ 
+{
 	font-size: 12px !important;
 	font-weight: 400 !important;
 	font-style: italic;
@@ -1051,9 +1052,9 @@ section
 	font-weight: 400 !important;
 	font-style: italic;
 	color: #939393 !important;
-} 
+}
 .find_input:-ms-input-placeholder
-{ 
+{
 	font-size: 14px !important;
 	font-weight: 400 !important;
 	font-style: italic;
@@ -1110,8 +1111,8 @@ section
 .top_item_image img
 {
 	max-width: 100%;
-	
-	
+
+
 }
 .top_item_content
 {
@@ -1464,6 +1465,7 @@ section
 .newsletter_background
 {
 	position: absolute;
+	background-image:url('/static/images/newsletter.jpg');
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -1535,9 +1537,9 @@ section
 	font-weight: 400 !important;
 	font-style: italic;
 	color: #FFFFFF !important;
-} 
+}
 .newsletter_input:-ms-input-placeholder
-{ 
+{
 	font-size: 14px !important;
 	font-weight: 400 !important;
 	font-style: italic;

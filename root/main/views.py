@@ -5,3 +5,7 @@ from django.http import HttpResponse
 
 def index(request):
     return render(request,"homepage.html")
+
+def error_404(request,exception):
+    data = {}
+    return render(request,"error404.html",data)

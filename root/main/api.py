@@ -64,6 +64,55 @@ class ModelDetail(APIView):
             return Response(status= status.HTTP_410_GONE)
         except Mode.DoesNotExist:
             return Response(f'Mode {model_id} not found', status= status.HTTP_404_NOT_FOUND)
+
+
+
+
+class OperationModelList(APIView):
+    def get(self,request):
+
+        operationmodel = OperationMode.objects.all()
+        serializer = OperationModeSerializer(operationmodel,many = True)
+        return Response(serializer.data)
+
+    def post(self,request):
+        #model = Mode.objects.all()
+        serializer = OperationModeSerializer(data= request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status= status.HTTP_201_CREATED)
+        return Response(serializer.errors, status = status.HTTP_400_BAD_REQUEST)
+
+
+
+class OperationModelDetail(APIView):
+    def get(self,request,object_type):
+        try:
+            model = OperationMode.objects.get(id = object_type)
+        except OperationMode.DoesNotExist:
+            return Response(f'Mode {object_type} not found', status= status.HTTP_404_NOT_FOUND)
+        serializer = OperationModeSerializer(model)
+        return Response(serializer.data)
+
+    def put(self,request,object_type):
+        try:
+            model = OperationMode.objects.get(id = object_type)
+        except OperationMode.DoesNotExist:
+            return Response(f'Mode {object_type} not found', status= status.HTTP_404_NOT_FOUND)
+
+        serializer = OperationModeSerializer(model,data= request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status= status.HTTP_201_CREATED)
+        return Response(serializer.errors, status = status.HTTP_400_BAD_REQUEST)
+
+    def delete(self,request,object_type):
+        try:
+            model = OperationMode.objects.get(id = object_type)
+            model.delete()
+            return Response(status= status.HTTP_410_GONE)
+        except OperationMode.DoesNotExist:
+            return Response(f'Mode {object_type} not found', status= status.HTTP_404_NOT_FOUND)
         
 
 

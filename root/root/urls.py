@@ -16,12 +16,19 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from django.conf.urls import url
-from main.api import ModelList,ModelDetail,UserAuthentication
+from django.conf.urls import handler404
+from main import views as common_views
+from main.api import ModelList,ModelDetail,UserAuthentication,OperationModelList,OperationModelDetail
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('main.urls')),
     url(r'^api/mode_list/$', ModelList.as_view(),name='Mode_list'),
     url(r'^api/auth/$', UserAuthentication.as_view(),name='Admin Authentication API'),
-    url(r'^api/mode_list/(?P<model_id>\d+)$', ModelDetail.as_view(),name='Mode_list')
+    url(r'^api/mode_list/(?P<model_id>\d+)$', ModelDetail.as_view(),name='Mode_list'),
+    url(r'^api/operation_list/$', OperationModelList.as_view(),name='OperationMode_list'),
+    url(r'^api/operation_list/(?P<object_type>\d+)$', OperationModelDetail.as_view(),name='OperationMode_list')
+
 ]
+
+handler404 = common_views.error_404

@@ -25,7 +25,7 @@ SECRET_KEY = '2a8q^zgyxbn5u0@q)$!c)4i^im&@#hsn2uu=3nz+g5n4jkg2+d'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['nithusv.pythonanywhere.com','localhost',"127.0.0.1"]
 
 
 # Application definition
