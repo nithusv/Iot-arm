@@ -31,7 +31,7 @@ class OperationMode(models.Model):
 
 class RobotImage(models.Model):
     img_name = models.CharField(max_length=20, unique=True)
-    img = models.ImageField(upload_to=None)
+    img = models.ImageField(upload_to='static/images')
 
     
 
