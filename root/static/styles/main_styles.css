@@ -62,7 +62,8 @@
 	100%  {opacity: 1;}
 
   }
-#imnithu{
+
+  #imnithu{
 	position: relative;
 	animation-name: slideleft;
 	animation-duration: 1s;
@@ -93,9 +94,8 @@
 	padding-right: 200px;
 	animation-name: slideright;
 	animation-duration: 1s;
-	
+
 }
- 
 
 *
 {

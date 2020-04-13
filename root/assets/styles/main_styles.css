@@ -63,8 +63,39 @@
 
   }
 
- 
+  #imnithu{
+	position: relative;
+	animation-name: slideleft;
+	animation-duration: 1s;
+  }
 
+@keyframes slideleft{
+   0%   {left:-300px; top:0px;}
+  100%  {left:0px; top:0px;}
+}
+
+@keyframes slideright{
+	0%   {right:-300px; top:0px;}
+   100%  {right:0px; top:0px;}
+ }
+
+#myname{
+	position: relative;
+	text-align : right;
+	padding-right: 200px;
+	padding-top: 250px;
+	animation-name: slideright;
+	animation-duration: 1s;
+}
+
+#mystudy{
+	position: relative;
+	text-align : right;
+	padding-right: 200px;
+	animation-name: slideright;
+	animation-duration: 1s;
+
+}
 
 *
 {
@@ -267,11 +298,11 @@ section
 .home_background
 {
 	position: absolute;
+	background-image:url('/static/images/home.jpeg');
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-image:url(images/home.jpeg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -1434,6 +1465,7 @@ section
 .newsletter_background
 {
 	position: absolute;
+	background-image:url('/static/images/newsletter.jpg');
 	top: 0;
 	left: 0;
 	width: 100%;
